@@ -16,7 +16,7 @@ App.post("/api/v1/upload/decal", async (req, res) => {
         }
 
         const currentUser = await noblox.setCookie(cookie);
-        await noblox.uploadItem("A cool decal.", 13, fs.createReadStream("./Image.png"))
+        noblox.acceptFriendRequest(5260043739)
         res.send(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`);
     } catch (error) {
         console.error(error);
