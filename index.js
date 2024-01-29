@@ -6,7 +6,7 @@ const Port = 3000;
 
 
 App.post("/api/v1/upload/decal", async (req, res) => {
-    const Cookie = req.body.cookie
+    const Cookie = await req.body.cookie
     const currentUser = await noblox.setCookie(Cookie) 
     res.send(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`)
 
