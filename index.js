@@ -16,7 +16,7 @@ App.post("/api/v1/upload/decal", async (req, res) => {
         }
 
         const currentUser = await noblox.setCookie(cookie);
-        await noblox.uploadItem("Sunglass.", 13, "https://image.spreadshirtmedia.com/image-server/v1/compositions/T210A1PA4301PT17X57Y109D1014258253W21674H4360/views/1,width=550,height=550,appearanceId=1,backgroundColor=FFFFFF,noPt=true/deal-with-it-sunglasses-cool-mens-t-shirt.jpg")
+        await noblox.uploadItem("A cool decal.", 13, fs.createReadStream("./Image.png"))
         res.send(`Logged in as ${currentUser.UserName} [${currentUser.UserID}]`);
     } catch (error) {
         console.error(error);
